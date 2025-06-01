@@ -1,3 +1,4 @@
+from __future__ import annotations
 import math
 
 
@@ -18,7 +19,7 @@ class Vector:
         return Vector(self.coordinate_x - other.coordinate_x,
                       self.coordinate_y - other.coordinate_y)
 
-    def __mul__(self, other: float | "Vector") -> "Vector | float":
+    def __mul__(self, other: float | Vector) -> Vector | float:
         if isinstance(other, (int, float)):
             return Vector(self.coordinate_x * other, self.coordinate_y * other)
         if isinstance(other, Vector):
