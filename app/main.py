@@ -31,8 +31,8 @@ class Vector:
         if isinstance(other, (int, float)):
             return Vector(self.coordinate_x * other, self.coordinate_y * other)
         if isinstance(other, Vector):
-            return round(self.coordinate_x * other.coordinate_x
-                         + self.coordinate_y * other.coordinate_y, 4)
+            return (self.coordinate_x * other.coordinate_x
+                    + self.coordinate_y * other.coordinate_y)
         raise TypeError("Unsupported multiplication type.")
 
     @classmethod
